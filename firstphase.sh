@@ -33,7 +33,7 @@ sudo pacman -S xorg-server xorg-xwininfo xorg-setxkbmap i3-wm i3blocks i3lock i3
 mkdir "$HOME/.cache"
 mkdir "$HOME/tmp"
 
-git clone https://aur.archlinux.org/paru.git /tmp/paru
+git clone https://aur.archlinux.org/paru.git "$HOME/tmp/paru"
 makepkg -si
 
 paru -S lf-git gtk-theme-arc-gruvbox-git zsh-fast-syntax-highlighting \
