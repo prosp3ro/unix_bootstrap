@@ -39,7 +39,7 @@ makepkg -si
 paru -S lf-git gtk-theme-arc-gruvbox-git zsh-fast-syntax-highlighting \
     zsh-system-clipboard-git veracrypt-console-bin simple-mtpfs \
     postman-bin htop-vim burpsuite brave-nightly-bin beekeeper-studio-bin \
-    artix-dark-theme-git vscodium-bin task-spooler abook
+    artix-dark-theme-git vscodium-bin task-spooler abook nsxiv
 
 sudo pacman -S direnv composer php php-apache php-gd npm nodejs mariadb sqlite
 sudo pacman -S signal-desktop
@@ -47,11 +47,6 @@ paru -S ferdium-bin
 
 sudo chsh
 chsh
-
-git clone "https://github.com/pr0sp3ro/nsxiv" "$HOME/tmp/nsxiv"
-cd "$HOME/tmp/nsxiv" || exit    
-rm -f config.h
-sudo make install
 
 git clone "https://github.com/pr0sp3ro/dmenu" "$HOME/tmp/dmenu"
 cd "$HOME/tmp/dmenu" || exit    
