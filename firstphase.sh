@@ -27,11 +27,14 @@ sudo pacman -S xorg-server xorg-xwininfo xorg-setxkbmap i3-wm i3blocks i3lock i3
     socat moreutils alacritty at blueman cmake findutils gawk \
     ripgrep gimp gtk2 gtk3 gtk4 highlight less lxappearance lynx \
     lua pinentry qt5ct tar smbclient sed unrar zip unzip tzdata wget whois \
-    xwallpaper ninja curl
+    xwallpaper ninja curl ttf-linux-libertine ttf-font-awesome ttf-dejavu
 
-# rm -rf "${HOME:?}/*"
 mkdir "$HOME/.cache"
 mkdir "$HOME/tmp"
+mkdir "$HOME/doc"
+mkdir "$HOME/img"
+mkdir -p "$HOME/.local/share"
+mkdir "$HOME/.config"
 
 git clone https://aur.archlinux.org/paru.git "$HOME/tmp/paru"
 makepkg -si
@@ -44,6 +47,13 @@ paru -S lf-git gtk-theme-arc-gruvbox-git zsh-fast-syntax-highlighting \
 sudo pacman -S direnv composer php php-apache php-gd npm nodejs mariadb sqlite
 sudo pacman -S signal-desktop
 paru -S ferdium-bin
+
+sudo pacman -S mariadb
+sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+sudo mysql -e "CREATE USER 'prospero'@'localhost' IDENTIFIED BY 'prospero';" || exit 1
+
+sudo systemctl enable --now httpd
+sudo systemctl enable --now mariadb
 
 sudo chsh
 chsh
