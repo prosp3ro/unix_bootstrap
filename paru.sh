@@ -23,5 +23,3 @@ for package in "${packages[@]}"; do
     # paru -S "$package" --noconfirm
     paru -S "$package"
 done
-
-paru -S ferdium-bin

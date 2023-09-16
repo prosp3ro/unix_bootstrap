@@ -108,7 +108,6 @@ packages2=(
     "gtk4"
     "highlight"
     "less"
-    "lxappearance"
     "lynx"
     "lua"
     "pinentry"
@@ -132,14 +131,12 @@ packages2=(
 
 sudo pacman -S ${packages2[*]}
 
+sudo chsh
+chsh
+
 mkdir "$HOME/.cache"
 mkdir -p "$HOME/.local/share"
 mkdir "$HOME/tmp"
 # mkdir "$HOME/doc"
 # mkdir "$HOME/img"
 # mkdir "$HOME/.config"
-
-sudo chsh
-chsh
-
-sudo pacman -S signal-desktop

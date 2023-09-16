@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo pacman -S lxappearance
+
 paruPackages=(
     "gtk-theme-arc-gruvbox-git"
     "artix-dark-theme-git"
