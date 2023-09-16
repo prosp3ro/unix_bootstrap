@@ -1,8 +1,20 @@
 #!/usr/bin/env bash
 
-sudo pacman -S lxappearance ttf-linux-libertine ttf-font-awesome \
-    ttf-dejavu noto-fonts noto-fonts-emoji python-qdarkstyle \
-    ttf-font-awesome ttf-dejavu
+packages=(
+    "gtk2"
+    "gtk3"
+    "gtk4"
+    "lxappearance"
+    "ttf-linux-libertine"
+    "ttf-font-awesome"
+    "ttf-dejavu"
+    "noto-fonts"
+    "noto-fonts-emoji"
+    "python-qdarkstyle"
+    "qt5ct"
+)
+
+sudo pacman -S ${packages[*]}
 
 paruPackages=(
     "gtk-theme-arc-gruvbox-git"

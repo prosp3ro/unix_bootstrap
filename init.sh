@@ -24,8 +24,8 @@ corePackages=(
     "reflector"
     "bluez"
     "bluez-utils"
-    "pulseaudio-bluetooth"
     "pulseaudio"
+    "pulseaudio-bluetooth"
     "cups"
     "xdg-utils"
     "xdg-user-dirs"
@@ -34,9 +34,13 @@ corePackages=(
     "xorg-server"
     "xorg-xwininfo"
     "xorg-setxkbmap"
+    "xorg-xprop"
+    "xorg-xbacklight"
     "openssh"
     "zsh"
     "zsh-autosuggestions"
+    "curl"
+    "wget"
 )
 
 sudo pacman -S ${corePackages[*]}
@@ -54,3 +58,8 @@ mkdir "$HOME/tmp"
 # mkdir "$HOME/doc"
 # mkdir "$HOME/img"
 # mkdir "$HOME/.config"
+
+echo
+echo "get ssh key and clone dotfiles"
+echo "git@github.com:<username>/<repo>"
+echo "then run second.sh"

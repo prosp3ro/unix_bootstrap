@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo pacman -S apache
+
 sudo systemctl enable --now httpd
 
 # sudo sed -i 's/#\(LoadModule rewrite_module modules\/mod_rewrite\.so\)/\1/' /etc/httpd/conf/httpd.conf
