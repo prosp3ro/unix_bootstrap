@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 sudo pacman -S lxappearance ttf-linux-libertine ttf-font-awesome \
-    ttf-dejavu
+    ttf-dejavu noto-fonts noto-fonts-emoji python-qdarkstyle \
+    ttf-font-awesome ttf-dejavu
 
 paruPackages=(
     "gtk-theme-arc-gruvbox-git"
