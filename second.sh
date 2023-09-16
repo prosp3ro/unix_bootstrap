@@ -41,18 +41,15 @@ packages=(
     "python-pip"
     "libreoffice"
     "skim"
-    "socat"
     "moreutils"
     "alacritty"
     "blueman"
-    "cmake"
     "findutils"
     "gawk"
     "ripgrep"
     "gimp"
     "highlight"
     "less"
-    "lynx"
     "lua"
     "pinentry"
     "tar"
@@ -70,3 +67,8 @@ packages=(
 )
 
 sudo pacman -S ${packages[*]}
+
+echo
+echo "run build-my-programs.sh"
+echo "then logout and login again"
+echo "and then run build-paru.sh and appearance.sh"

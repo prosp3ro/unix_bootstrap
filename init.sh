@@ -41,6 +41,8 @@ corePackages=(
     "zsh-autosuggestions"
     "curl"
     "wget"
+    "cmake"
+    "socat"
 )
 
 sudo pacman -S ${corePackages[*]}
@@ -49,6 +51,8 @@ systemctl enable --now NetworkManager
 systemctl enable --now bluetooth
 systemctl enable --now cups
 
+echo
+echo "/bin/zsh"
 sudo chsh
 chsh
 
