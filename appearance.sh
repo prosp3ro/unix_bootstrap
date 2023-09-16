@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-sudo pacman -S lxappearance
+sudo pacman -S lxappearance ttf-linux-libertine ttf-font-awesome \
+    ttf-dejavu
 
 paruPackages=(
     "gtk-theme-arc-gruvbox-git"
