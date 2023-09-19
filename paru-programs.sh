@@ -14,6 +14,7 @@ packages=(
     "task-spooler"
     "abook"
     "nsxiv"
+    "mmv"
 )
 
 for package in "${packages[@]}"; do
