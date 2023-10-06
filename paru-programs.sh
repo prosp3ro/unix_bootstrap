@@ -15,6 +15,7 @@ packages=(
     "abook"
     "nsxiv"
     "mmv"
+    "tmux-mem-cpu-load"
 )
 
 for package in "${packages[@]}"; do
