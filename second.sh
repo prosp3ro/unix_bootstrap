@@ -64,6 +64,7 @@ packages=(
     "direnv"
     "nodejs"
     "npm"
+    "tmux"
 )
 
 sudo pacman -S ${packages[*]}
