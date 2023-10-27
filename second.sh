@@ -65,6 +65,7 @@ packages=(
     "nodejs"
     "npm"
     "tmux"
+    "wmname"
 )
 
 sudo pacman -S ${packages[*]}
