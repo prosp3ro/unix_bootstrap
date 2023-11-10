@@ -66,6 +66,7 @@ packages=(
     "npm"
     "tmux"
     "wmname"
+    "go"
 )
 
 sudo pacman -S ${packages[*]}
