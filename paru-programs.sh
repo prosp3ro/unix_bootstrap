@@ -10,7 +10,6 @@ packages=(
     "htop-vim"
     "burpsuite"
     "brave-nightly-bin"
-    "vscodium-bin"
     "task-spooler"
     "abook"
     "nsxiv"

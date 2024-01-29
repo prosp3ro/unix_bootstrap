@@ -7,4 +7,4 @@ cd "$HOME/tmp/neovim" || exit 1
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 # git checkout stable
 sudo make install
-rm -rf "$HOME/tmp/neovim"
+sudo rm -rf "$HOME/tmp/neovim"
