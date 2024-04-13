@@ -15,6 +15,7 @@ packages=(
     "nsxiv"
     "mmv"
     "tmux-mem-cpu-load"
+    "activitywatch-bin"
 )
 
 for package in "${packages[@]}"; do
