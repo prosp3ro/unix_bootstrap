@@ -67,6 +67,7 @@ packages=(
     "tmux"
     "wmname"
     "go"
+    "csvlens"
 )
 
 sudo pacman -S ${packages[*]}
