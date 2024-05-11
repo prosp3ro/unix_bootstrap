@@ -2,6 +2,8 @@
 
 sudo pacman -S mariadb sqlite
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-sudo mysql -e "CREATE USER 'prospero'@'localhost' IDENTIFIED BY 'prospero';" || exit 1
+
+echo "running command: CREATE USER '$USER'@'localhost' IDENTIFIED BY '$USER'..."
+sudo mysql -e "CREATE USER '$USER'@'localhost' IDENTIFIED BY '$USER';" || exit 1
 
 sudo systemctl enable --now mariadb
