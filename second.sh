@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
 packages=(
-    "i3-wm"
-    "i3blocks"
-    "i3lock"
-    "i3status"
     "polkit"
     "xcompmgr"
     "arandr"
@@ -22,7 +18,6 @@ packages=(
     "zathura-pdf-mupdf"
     "poppler"
     "fzf"
-    "system-config-printer"
     "gparted"
     "ueberzug"
     "mediainfo"
@@ -40,9 +35,7 @@ packages=(
     "python"
     "python-pip"
     "libreoffice"
-    "skim"
     "moreutils"
-    "alacritty"
     "blueman"
     "findutils"
     "gawk"
