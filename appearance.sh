@@ -3,7 +3,7 @@
 packages=(
     "gtk2"
     "gtk3"
-    "gtk4"
+    # "gtk4"
     "lxappearance"
     "ttf-linux-libertine"
     "ttf-font-awesome"
@@ -16,11 +16,11 @@ packages=(
 
 sudo pacman -S ${packages[*]}
 
-paruPackages=(
+paru_packages=(
     "gtk-theme-arc-gruvbox-git"
 )
 
-for package in "${paruPackages[@]}"; do
-    # paru -S "$package" --noconfirm
-    paru -S "$package"
+for paru_package in "${paru_packages[@]}"; do
+    # paru -S "$paru_package" --noconfirm
+    paru -S "$paru_package"
 done

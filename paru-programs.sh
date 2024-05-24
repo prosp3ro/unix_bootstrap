@@ -4,7 +4,6 @@ packages=(
     "lf-git"
     "zsh-fast-syntax-highlighting"
     "zsh-system-clipboard-git"
-    "veracrypt-console-bin"
     "simple-mtpfs"
     "postman-bin"
     "htop-vim"

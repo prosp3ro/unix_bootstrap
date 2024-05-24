@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# before install git
+
 sudo pacman -Sy
 sudo pacman -S archlinux-keyring
 
@@ -20,7 +22,6 @@ corePackages=(
     "base"
     "base-devel"
     "linux-headers"
-    "git"
     "reflector"
     "bluez"
     "bluez-utils"
@@ -51,10 +52,14 @@ systemctl enable --now NetworkManager
 systemctl enable --now bluetooth
 systemctl enable --now cups
 
-echo
-echo "/bin/zsh"
+echo -e "\n/bin/zsh"
 sudo chsh
 chsh
+
+if [ ! "$HOME" ]; then
+    echo "HOME variable isn't set!"
+    exit
+fi
 
 mkdir "$HOME/.cache"
 mkdir -p "$HOME/.local/share"
@@ -63,7 +68,4 @@ mkdir "$HOME/tmp"
 # mkdir "$HOME/img"
 # mkdir "$HOME/.config"
 
-echo
-echo "get ssh key and clone dotfiles"
-echo "git@github.com:<username>/<repo>"
-echo "then run second.sh"
+echo -e "\nSuccess."
