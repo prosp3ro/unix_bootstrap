@@ -6,8 +6,10 @@ sudo pacman -Sy
 sudo pacman -S archlinux-keyring
 
 corePackages=(
-    "linux"
-    "linux-firmware"
+    # "linux"
+    # "linux-firmware"
+    "linux-headers"
+    "reflector"
     "vim"
     "intel-ucode"
     "grub"
@@ -21,8 +23,6 @@ corePackages=(
     "dosfstools"
     "base"
     "base-devel"
-    "linux-headers"
-    "reflector"
     "bluez"
     "bluez-utils"
     "pulseaudio"
