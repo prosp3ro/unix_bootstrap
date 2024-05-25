@@ -4,6 +4,7 @@
 
 sudo pacman -Sy
 sudo pacman -S archlinux-keyring
+sudo pacman -Su
 
 corePackages=(
     # "linux"
@@ -25,8 +26,8 @@ corePackages=(
     "base-devel"
     "bluez"
     "bluez-utils"
-    "pulseaudio"
-    "pulseaudio-bluetooth"
+    # "pulseaudio"
+    # "pulseaudio-bluetooth"
     # "cups"
     "xdg-utils"
     "xdg-user-dirs"
@@ -46,11 +47,11 @@ corePackages=(
     "socat"
 )
 
-sudo pacman -S ${corePackages[*]}
+sudo pacman -S ${corePackages[*]} || exit 1
 
-systemctl enable --now NetworkManager
-systemctl enable --now bluetooth
-systemctl enable --now cups
+systemctl enable --now NetworkManager || exit 1
+systemctl enable --now bluetooth || exit 1
+# systemctl enable --now cups || exit 1
 
 echo -e "\n/bin/zsh"
 sudo chsh
