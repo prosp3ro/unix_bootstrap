@@ -10,6 +10,7 @@ cd "$PARU_TMP_DIR" || exit 1
 makepkg -si
 [ -d "$PARU_TMP_DIR" ] && rm -rf "$PARU_TMP_DIR"
 
+echo -e "\n=> Installing veracrypt..."
 paru -S veracrypt-console-bin
 
 echo -e "\nlsblk"

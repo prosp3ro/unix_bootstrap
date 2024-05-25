@@ -52,13 +52,15 @@ corePackages=(
     "rustup"
 )
 
+echo -e "\n===========\n\n=> Installing pacman packages..."
 sudo pacman -S ${corePackages[*]} || exit 1
 
+echo -e "\n=> Enabling systemd units..."
 sudo systemctl enable --now NetworkManager || exit 1
 sudo systemctl enable --now bluetooth || exit 1
 # sudo systemctl enable --now cups || exit 1
 
-echo -e "\n/bin/zsh"
+echo -e "\n=> Changing default shell. /bin/zsh"
 echo "For root:"
 sudo chsh
 echo -e "\nFor user:"
@@ -69,10 +71,16 @@ if [ ! "$HOME" ]; then
     exit
 fi
 
-[ ! -d "$HOME/.cache" ] && mkdir "$HOME/.cache"
-[ ! -d "$HOME/tmp" ] && mkdir "$HOME/tmp"
-[ ! -d "$HOME/.local/share" ] && mkdir -p "$HOME/.local/share"
-[ ! -d "$HOME/.local/git" ] && mkdir "$HOME/.local/git"
-# [ ! -d "$HOME/.local/scripts" ] && mkdir "$HOME/.local/scripts"
+echo -e "\n=> Creating dirs..."
+[ ! -d "$HOME/.cache" ] && mkdir -v "$HOME/.cache"
+[ ! -d "$HOME/tmp" ] && mkdir -v "$HOME/tmp"
+[ ! -d "$HOME/.local/share" ] && mkdir -vp "$HOME/.local/share"
+[ ! -d "$HOME/.local/git" ] && mkdir -v "$HOME/.local/git"
+# [ ! -d "$HOME/.local/scripts" ] && mkdir -v "$HOME/.local/scripts"
+
+echo -e "\n=> Rust init..."
+if [ "$(command -v rustup)" ]; then
+    rustup default stable || exit 1
+fi
 
 echo -e "\nSuccess."
