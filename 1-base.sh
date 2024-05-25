@@ -70,10 +70,9 @@ if [ ! "$HOME" ]; then
 fi
 
 [ ! -d "$HOME/.cache" ] && mkdir "$HOME/.cache"
-[ ! -d "$HOME/.local/share" ] && mkdir -p "$HOME/.local/share"
 [ ! -d "$HOME/tmp" ] && mkdir "$HOME/tmp"
-# mkdir "$HOME/doc"
-# mkdir "$HOME/img"
-# mkdir "$HOME/.config"
+[ ! -d "$HOME/.local/share" ] && mkdir -p "$HOME/.local/share"
+[ ! -d "$HOME/.local/git" ] && mkdir "$HOME/.local/git"
+# [ ! -d "$HOME/.local/scripts" ] && mkdir "$HOME/.local/scripts"
 
 echo -e "\nSuccess."

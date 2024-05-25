@@ -3,6 +3,8 @@
 sudo pacman -S mariadb sqlite
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
+[ ! "$USER" ] && echo "USER variable is not set!" && exit 1
+
 echo "running command: CREATE USER '$USER'@'localhost' IDENTIFIED BY '$USER'..."
 sudo mysql -e "CREATE USER '$USER'@'localhost' IDENTIFIED BY '$USER';" || exit 1
 
