@@ -37,6 +37,7 @@ corePackages=(
 
     "bluez"
     "bluez-utils"
+    "blueman"
     "pulseaudio"
     "pulseaudio-bluetooth"
     # "cups"
@@ -48,8 +49,6 @@ corePackages=(
     "xorg-setxkbmap"
     "xorg-xprop"
     "xorg-xbacklight"
-
-    "rustup"
 )
 
 echo -e "\n===========\n\n=> Installing pacman packages..."
@@ -79,6 +78,8 @@ echo -e "\n=> Creating dirs..."
 # [ ! -d "$HOME/.local/scripts" ] && mkdir -v "$HOME/.local/scripts"
 
 echo -e "\n=> Rust init..."
+sudo pacman -S rustup || exit 1
+
 if [ "$(command -v rustup)" ]; then
     rustup default stable || exit 1
 fi

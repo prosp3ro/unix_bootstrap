@@ -25,7 +25,7 @@ pacman_packages=(
     "zathura-pdf-mupdf"
     "poppler"
     "fzf"
-    "gparted"
+    # "gparted"
     "ueberzug"
     "mediainfo"
     "bat"
@@ -39,15 +39,12 @@ pacman_packages=(
     "ncmpcpp"
     "dunst"
     "libnotify"
-    "python"
-    "python-pip"
-    "libreoffice"
+    # "libreoffice"
     "moreutils"
-    "blueman"
     "findutils"
     "gawk"
     "ripgrep"
-    "gimp"
+    # "gimp"
     "highlight"
     "less"
     "lua"
@@ -67,7 +64,8 @@ pacman_packages=(
     "tmux"
     "wmname"
     # "go"
-    "csvlens"
+    # "csvlens"
+
     "chromium"
 
     "gtk2"
@@ -80,10 +78,14 @@ pacman_packages=(
     # "ttf-linux-libertine"
     # "ttf-font-awesome"
     # "ttf-dejavu"
-    "noto-fonts"
-    "noto-fonts-emoji"
+    # "noto-fonts"
+    # "noto-fonts-emoji"
+
+    "python"
+    "python-pip"
 
     "lazygit"
+    "btop"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
@@ -94,10 +96,10 @@ paru_packages=(
     "lf-git"
     "zsh-fast-syntax-highlighting"
     "zsh-system-clipboard-git"
-    "simple-mtpfs"
+    # "simple-mtpfs"
     "htop-vim"
-    "task-spooler"
-    "abook"
+    # "task-spooler"
+    # "abook"
     "nsxiv"
     "mmv"
 
