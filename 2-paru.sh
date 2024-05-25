@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-[ ! -d "$HOME/tmp/paru" ] && mkdir -p "$HOME/tmp/paru"
+PARU_TMP_DIR="$HOME/tmp/paru"
 
-git clone https://aur.archlinux.org/paru.git "$HOME/tmp/paru" || exit 1
-cd "$HOME/tmp/paru" || exit 1
+[ ! -d "$PARU_TMP_DIR" ] && mkdir -p "$PARU_TMP_DIR"
+
+git clone https://aur.archlinux.org/paru.git "$PARU_TMP_DIR" || exit 1
+cd "$PARU_TMP_DIR" || exit 1
 makepkg -si
-rm -rf "$HOME/tmp/paru"
+[ -d "$PARU_TMP_DIR" ] && rm -rf "$PARU_TMP_DIR"
 
 paru -S veracrypt-console-bin
 
