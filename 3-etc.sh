@@ -82,6 +82,8 @@ pacman_packages=(
     # "ttf-dejavu"
     "noto-fonts"
     "noto-fonts-emoji"
+
+    "lazygit"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
