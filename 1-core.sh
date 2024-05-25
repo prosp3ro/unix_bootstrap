@@ -49,9 +49,9 @@ corePackages=(
 
 sudo pacman -S ${corePackages[*]} || exit 1
 
-systemctl enable --now NetworkManager || exit 1
-systemctl enable --now bluetooth || exit 1
-# systemctl enable --now cups || exit 1
+sudo systemctl enable --now NetworkManager || exit 1
+sudo systemctl enable --now bluetooth || exit 1
+# sudo systemctl enable --now cups || exit 1
 
 echo -e "\n/bin/zsh"
 sudo chsh
@@ -62,9 +62,9 @@ if [ ! "$HOME" ]; then
     exit
 fi
 
-mkdir "$HOME/.cache"
-mkdir -p "$HOME/.local/share"
-mkdir "$HOME/tmp"
+[[ ! -d "$HOME/.cache" ]] && mkdir "$HOME/.cache"
+[[ ! -d "$HOME/.local/share" ]] && mkdir -p "$HOME/.local/share"
+[[ ! -d "$HOME/tmp" ]] && mkdir "$HOME/tmp"
 # mkdir "$HOME/doc"
 # mkdir "$HOME/img"
 # mkdir "$HOME/.config"
