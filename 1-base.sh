@@ -37,8 +37,8 @@ corePackages=(
 
     "bluez"
     "bluez-utils"
-    # "pulseaudio"
-    # "pulseaudio-bluetooth"
+    "pulseaudio"
+    "pulseaudio-bluetooth"
     # "cups"
 
     "xdg-utils"
