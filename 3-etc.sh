@@ -86,6 +86,7 @@ pacman_packages=(
 
     "lazygit"
     "btop"
+    "keepassxc"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
