@@ -107,6 +107,7 @@ paru_packages=(
     # "burpsuite"
     # "postman-bin"
     "brave-nightly-bin"
+    "obsidian-bin"
 )
 
 for paru_package in "${paru_packages[@]}"; do
