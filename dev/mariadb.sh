@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S mariadb sqlite
+sudo pacman -S mariadb
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 
 [ ! "$USER" ] && echo "USER variable is not set!" && exit 1

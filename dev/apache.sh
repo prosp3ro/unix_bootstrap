@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S apache php-fpm
+sudo pacman -S apache php-fpm php-apache 
 
 sudo systemctl enable --now httpd
 sudo systemctl enable --now php-fpm
