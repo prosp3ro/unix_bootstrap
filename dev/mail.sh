@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # paru -S mailhog-bin
-paru -S mailpit
+# paru -S mailpit
+paru -S mailpit-bin
 
 # sudo systemctl enable --now mailhog
 sudo systemctl enable --now mailpit

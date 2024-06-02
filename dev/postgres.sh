@@ -6,3 +6,5 @@ su -l postgres -c "createuser --interactive"
 
 sudo sed -i 's/;\(extension=pdo_pgsql\)/\1/' /etc/php/php.ini
 sudo sed -i 's/;\(extension=pgsql\)/\1/' /etc/php/php.ini
+
+sudo systemctl enable --now postgresql
