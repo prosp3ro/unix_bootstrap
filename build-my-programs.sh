@@ -10,7 +10,7 @@ read -rp "Choice: " answer
 
 if [ "$answer" == "y" ]; then
     git clone "git@github.com:$GIT_USERNAME/st-enhanced.git" "$GIT_DIR/st-enhanced"
-    cd "$GIT_DIR/st" || exit 1
+    cd "$GIT_DIR/st-enhanced" || exit 1
     sudo make install || exit 1
 fi
 
@@ -19,7 +19,7 @@ read -rp "Choice: " answer
 
 if [ "$answer" == "y" ]; then
     git clone "git@github.com:$GIT_USERNAME/dmenu-enhanced.git" "$GIT_DIR/dmenu-enhanced"
-    cd "$GIT_DIR/dmenu" || exit 1
+    cd "$GIT_DIR/dmenu-enhanced" || exit 1
     sudo make install || exit 1
 fi
 
