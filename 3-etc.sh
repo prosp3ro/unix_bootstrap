@@ -87,6 +87,11 @@ pacman_packages=(
     "lazygit"
     "btop"
     "keepassxc"
+    "fd"
+    "ttf-jetbrains-mono"
+    "ttf-hack-nerd"
+    "dust"
+    "github-cli"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
