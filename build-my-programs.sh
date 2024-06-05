@@ -23,7 +23,7 @@ if [ "$answer" == "y" ]; then
     sudo make install || exit 1
 fi
 
-echo "Build dwm? [y/N]"
+echo "Build moonwm? [y/N]"
 read -rp "Choice: " answer
 
 if [ "$answer" == "y" ]; then
