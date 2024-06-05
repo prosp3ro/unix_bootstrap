@@ -44,11 +44,13 @@ corePackages=(
 
     "xdg-utils"
     "xdg-user-dirs"
+    "xorg"
     "xorg-server"
     "xorg-xwininfo"
     "xorg-setxkbmap"
     "xorg-xprop"
     "xorg-xbacklight"
+    "inetutils"
 )
 
 echo -e "\n===========\n\n=> Installing pacman packages..."
