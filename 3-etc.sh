@@ -113,6 +113,7 @@ paru_packages=(
     # "postman-bin"
     "brave-nightly-bin"
     "obsidian-bin"
+    "betterlockscreen"
 )
 
 for paru_package in "${paru_packages[@]}"; do
