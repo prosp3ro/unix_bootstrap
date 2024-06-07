@@ -92,6 +92,7 @@ pacman_packages=(
     "ttf-hack-nerd"
     "dust"
     "github-cli"
+    "xdotool"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
