@@ -78,8 +78,9 @@ pacman_packages=(
     # "ttf-linux-libertine"
     # "ttf-font-awesome"
     # "ttf-dejavu"
-    # "noto-fonts"
-    # "noto-fonts-emoji"
+    "noto-fonts"
+    "noto-fonts-emoji"
+    "noto-color-emoji-fontconfig"
 
     "python"
     "python-pip"
