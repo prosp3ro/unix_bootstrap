@@ -113,7 +113,7 @@ paru_packages=(
 
     # "burpsuite"
     # "postman-bin"
-    "brave-nightly-bin"
+    "brave-bin"
     "obsidian-bin"
     "betterlockscreen"
 )
