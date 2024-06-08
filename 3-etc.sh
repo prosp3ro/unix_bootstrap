@@ -80,7 +80,6 @@ pacman_packages=(
     # "ttf-dejavu"
     "noto-fonts"
     "noto-fonts-emoji"
-    "noto-color-emoji-fontconfig"
 
     "python"
     "python-pip"
@@ -116,6 +115,7 @@ paru_packages=(
     "brave-bin"
     "obsidian-bin"
     "betterlockscreen"
+    "noto-color-emoji-fontconfig"
 )
 
 for paru_package in "${paru_packages[@]}"; do
