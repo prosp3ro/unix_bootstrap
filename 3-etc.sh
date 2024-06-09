@@ -100,7 +100,7 @@ sudo pacman -S ${pacman_packages[*]} || exit 1
 paru_packages=(
     "gtk-theme-arc-gruvbox-git"
 
-    "lf-git"
+    "lf-bin"
     "zsh-fast-syntax-highlighting"
     "zsh-system-clipboard-git"
     # "simple-mtpfs"
