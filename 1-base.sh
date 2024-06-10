@@ -74,6 +74,8 @@ fi
 
 echo -e "\n=> Creating dirs..."
 [ ! -d "$HOME/.cache" ] && mkdir -v "$HOME/.cache"
+[ ! -d "$HOME/.cache/zsh" ] && mkdir -v "$HOME/.cache/zsh"
+[ ! -f "$HOME/.cache/zsh/history" ] && touch "$HOME/.cache/zsh/history"
 [ ! -d "$HOME/tmp" ] && mkdir -v "$HOME/tmp"
 [ ! -d "$HOME/.local/share" ] && mkdir -vp "$HOME/.local/share"
 [ ! -d "$HOME/.local/git" ] && mkdir -v "$HOME/.local/git"
