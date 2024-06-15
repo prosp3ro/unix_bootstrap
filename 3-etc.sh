@@ -4,7 +4,7 @@ echo "Install i3? [y/N]"
 read -rp "Choice: " answer
 
 if [ "$answer" == "y" ]; then
-    sudo pacman -S i3-wm i3status
+    sudo pacman -S i3-wm i3status i3lock
 fi
 
 pacman_packages=(
@@ -93,7 +93,6 @@ pacman_packages=(
     "dust"
     "github-cli"
     "xdotool"
-    "xss-lock"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
@@ -115,7 +114,6 @@ paru_packages=(
     # "postman-bin"
     "brave-bin"
     "obsidian-bin"
-    "betterlockscreen"
     "noto-color-emoji-fontconfig"
 )
 
