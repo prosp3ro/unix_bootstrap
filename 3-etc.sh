@@ -93,6 +93,7 @@ pacman_packages=(
     "dust"
     "github-cli"
     "xdotool"
+    "xss-lock"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
