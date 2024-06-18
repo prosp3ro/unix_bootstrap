@@ -18,5 +18,7 @@ paru -S php74-pear
 paru -S php74-xmlwriter
 paru -S php74-ctype
 paru -S php74-simplexml
+paru -S php74-xmlreader
+paru -S php74-zip
 
 sudo sed -i 's/;\(extension=gd\)/\1/' /etc/php74/php.ini
