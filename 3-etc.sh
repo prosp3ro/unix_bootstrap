@@ -108,7 +108,7 @@ paru_packages=(
     # "task-spooler"
     # "abook"
     "nsxiv"
-    "mmv"
+    "mmv-go"
 
     # "burpsuite"
     # "postman-bin"
