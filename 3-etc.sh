@@ -93,6 +93,7 @@ pacman_packages=(
     "dust"
     "github-cli"
     "xdotool"
+    "stow"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
