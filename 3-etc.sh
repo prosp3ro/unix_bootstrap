@@ -94,6 +94,9 @@ pacman_packages=(
     "github-cli"
     "xdotool"
     "stow"
+
+    "networkmanager-vpnc"
+    "vpnc"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
