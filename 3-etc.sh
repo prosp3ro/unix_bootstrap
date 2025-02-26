@@ -78,6 +78,7 @@ pacman_packages=(
     # "ttf-linux-libertine"
     # "ttf-font-awesome"
     # "ttf-dejavu"
+    "ttc-iosevka"
     "noto-fonts"
     "noto-fonts-emoji"
 
