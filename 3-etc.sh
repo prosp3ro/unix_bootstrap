@@ -1,20 +1,15 @@
 #!/usr/bin/env bash
 
-echo "Install i3? [y/N]"
-read -rp "Choice: " answer
-
-if [ "$answer" == "y" ]; then
-    sudo pacman -S i3-wm i3status i3lock
-fi
+sudo pacman -S i3-wm i3status
 
 pacman_packages=(
     "polkit"
-    "xcompmgr"
+    "tmux"
+    "stow"
+    "picom"
     "arandr"
     "exfat-utils"
     "ntfs-3g"
-    "pulsemixer"
-    "pavucontrol"
     "maim"
     "unclutter"
     "unzip"
@@ -49,7 +44,6 @@ pacman_packages=(
     "less"
     "lua"
     "pinentry"
-    "tar"
     "sed"
     "unrar"
     "zip"
@@ -61,12 +55,11 @@ pacman_packages=(
     "direnv"
     "nodejs"
     "npm"
-    "tmux"
     "wmname"
-    # "go"
+    "go"
     # "csvlens"
 
-    "chromium"
+    #"chromium"
 
     "gtk2"
     "gtk3"
@@ -79,8 +72,8 @@ pacman_packages=(
     # "ttf-font-awesome"
     # "ttf-dejavu"
     "ttc-iosevka"
-    "noto-fonts"
-    "noto-fonts-emoji"
+    #"noto-fonts"
+    #"noto-fonts-emoji"
 
     "python"
     "python-pip"
@@ -89,22 +82,19 @@ pacman_packages=(
     "btop"
     "keepassxc"
     "fd"
-    "ttf-jetbrains-mono"
-    "ttf-hack-nerd"
+    #"ttf-jetbrains-mono"
+    #"ttf-hack-nerd"
     "dust"
     "github-cli"
     "xdotool"
-    "stow"
 
-    "networkmanager-vpnc"
-    "vpnc"
+#"networkmanager-vpnc"
+#"vpnc"
 )
 
 sudo pacman -S ${pacman_packages[*]} || exit 1
 
 paru_packages=(
-    "gtk-theme-arc-gruvbox-git"
-
     "lf-bin"
     "zsh-fast-syntax-highlighting"
     "zsh-system-clipboard-git"
@@ -119,7 +109,7 @@ paru_packages=(
     # "postman-bin"
     "brave-bin"
     "obsidian-bin"
-    "noto-color-emoji-fontconfig"
+    # "noto-color-emoji-fontconfig"
 )
 
 for paru_package in "${paru_packages[@]}"; do

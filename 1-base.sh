@@ -5,17 +5,9 @@ sudo pacman -S archlinux-keyring
 sudo pacman -Su
 
 corePackages=(
-    # "linux"
-    # "linux-firmware"
-    # "linux-headers"
-    "vim"
-
     "intel-ucode"
     "xf86-input-libinput"
     "xf86-video-intel"
-
-    # "grub"
-    # "efibootmgr"
 
     "networkmanager"
     "network-manager-applet"
@@ -38,9 +30,13 @@ corePackages=(
     "bluez"
     "bluez-utils"
     "blueman"
-    "pulseaudio"
-    "pulseaudio-bluetooth"
-    # "cups"
+    "pipewire"
+    "wireplumber"
+	"pipewire-audio"
+	"pipewire-pulse"
+	"pipewire-alsa"
+	"pipewire-jack"
+	"gst-plugin-pipewire"
 
     "xdg-utils"
     "xdg-user-dirs"
@@ -57,11 +53,11 @@ echo -e "\n===========\n\n=> Installing pacman packages..."
 sudo pacman -S ${corePackages[*]} || exit 1
 
 echo -e "\n=> Enabling systemd units..."
-sudo systemctl enable --now NetworkManager || exit 1
-sudo systemctl enable --now bluetooth || exit 1
+sudo systemctl enable --now NetworkManager bluetooth || exit 1
+systemctl --user enable --now pipewire pipewire-pulse wireplumber || exit 1
 # sudo systemctl enable --now cups || exit 1
 
-echo -e "\n=> Changing default shell. /bin/zsh"
+echo -e "\n=> Change default shell to /bin/zsh"
 echo "For root:"
 sudo chsh
 echo -e "\nFor user:"
@@ -69,23 +65,20 @@ chsh
 
 if [ ! "$HOME" ]; then
     echo "HOME variable isn't set!"
-    exit
+    exit 1
 fi
 
 echo -e "\n=> Creating dirs..."
 [ ! -d "$HOME/.cache" ] && mkdir -v "$HOME/.cache"
-[ ! -d "$HOME/.cache/zsh" ] && mkdir -v "$HOME/.cache/zsh"
-[ ! -f "$HOME/.cache/zsh/history" ] && touch "$HOME/.cache/zsh/history"
+[ ! -f "$HOME/.cache/zsh_history" ] && touch "$HOME/.cache/zsh_history"
 [ ! -d "$HOME/tmp" ] && mkdir -v "$HOME/tmp"
-[ ! -d "$HOME/.local/share" ] && mkdir -vp "$HOME/.local/share"
-[ ! -d "$HOME/.local/git" ] && mkdir -v "$HOME/.local/git"
 # [ ! -d "$HOME/.local/scripts" ] && mkdir -v "$HOME/.local/scripts"
 
-echo -e "\n=> Rust init..."
-sudo pacman -S rustup || exit 1
+#echo -e "\n=> Rust init..."
+#sudo pacman -S rustup || exit 1
 
-if [ "$(command -v rustup)" ]; then
-    rustup default stable || exit 1
-fi
+#if [ "$(command -v rustup)" ]; then
+#    rustup default stable || exit 1
+#fi
 
-echo -e "\nSuccess."
+echo "Success."
